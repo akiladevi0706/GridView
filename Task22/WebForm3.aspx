@@ -11,17 +11,18 @@
     <div>
     
     </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ivydevConnectionString %>" SelectCommand="SELECT * FROM [employees]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EmployeeConnectionString %>" SelectCommand="SELECT * FROM [Employee]"></asp:SqlDataSource>
         <p>
             &nbsp;</p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="empid" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
             <Columns>
-                <asp:BoundField DataField="empid" HeaderText="empid" ReadOnly="True" SortExpression="empid" />
-                <asp:BoundField DataField="firstname" HeaderText="firstname" SortExpression="firstname" />
-                <asp:BoundField DataField="lastname" HeaderText="lastname" SortExpression="lastname" />
-                <asp:CheckBoxField DataField="namestyle" HeaderText="namestyle" SortExpression="namestyle" />
-                <asp:BoundField DataField="persontype" HeaderText="persontype" SortExpression="persontype" />
-                <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
+                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                <asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
+                <asp:BoundField DataField="Mobile" HeaderText="Mobile" SortExpression="Mobile" />
+                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                <asp:CheckBoxField DataField="isActive" HeaderText="isActive" SortExpression="isActive" />
+                <asp:BoundField DataField="CreatedOn" HeaderText="CreatedOn" SortExpression="CreatedOn" />
             </Columns>
         </asp:GridView>
     </form>
