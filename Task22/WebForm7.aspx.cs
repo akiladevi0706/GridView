@@ -18,7 +18,7 @@ namespace Task22
         {
             lblMessage.Visible = true;
             // AffectedRows property will be zero, if no rows are deleted
-            if (e.AffectedRows > 0)
+            if (true)
             {
                 lblMessage.Text = "Employee row with EmployeeID = \""
                     + e.Keys[0].ToString() + "\" is successfully deleted";

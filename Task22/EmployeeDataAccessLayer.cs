@@ -23,7 +23,7 @@ namespace Task22
         {
             List<Employee> listEmployees = new List<Employee>();
 
-            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            string CS = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
                 SqlCommand cmd = new SqlCommand("spGetEmployeesByDepartmentId", con);
@@ -46,5 +46,6 @@ namespace Task22
 
             return listEmployees;
         }
+       
     }
 }
